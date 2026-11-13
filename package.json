@@ -1,0 +1,34 @@
+{
+  "name": "nijashwa-studio",
+  "version": "0.1.0",
+  "description": "Nijashwa Studio - a free, offline-first video editor (single-file HTML/JS) packaged as an Android app with Capacitor.",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "prepare:web": "node scripts/prepare-web.mjs",
+    "csp:check": "node scripts/csp-hashes.mjs --check",
+    "csp:fix": "node scripts/csp-hashes.mjs --write",
+    "serve": "npx --yes http-server www -p 8080 -c-1",
+    "android:add": "cap add android && node scripts/android-patch.mjs",
+    "android:icons": "capacitor-assets generate --android",
+    "android:sync": "npm run prepare:web && cap sync android",
+    "android:debug": "npm run android:sync && cd android && ./gradlew assembleDebug",
+    "android:release": "npm run android:sync && cd android && ./gradlew assembleRelease"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/app": "^6.0.0",
+    "@capacitor/core": "^6.2.0",
+    "@capacitor/filesystem": "^6.0.0",
+    "@capacitor/share": "^6.0.0",
+    "capacitor-secure-storage-plugin": "0.10.0",
+    "html2canvas": "1.4.1",
+    "lamejs": "1.2.1",
+    "mp4-muxer": "5.1.3"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^6.2.0"
+  }
+}
