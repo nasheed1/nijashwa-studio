@@ -1,0 +1,39 @@
+name: Deploy web version to GitHub Pages
+
+# Publishes the web version (www/) at https://<user>.github.io/<repo>/
+# One-time setup: repo Settings -> Pages -> Source = "GitHub Actions". The repo must be Public.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      # www/vendor is not committed; it is copied from node_modules here.
+      - run: npm install --no-audit --no-fund
+      - run: npm run prepare:web
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: www
+      - id: deployment
+        uses: actions/deploy-pages@v4
