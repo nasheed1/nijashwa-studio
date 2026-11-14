@@ -94,3 +94,23 @@ html[data-layout=pro][data-layout=pro][data-layout=pro] #tbdock,html[data-layout
 html[data-layout=pro][data-layout=pro][data-layout=pro] .zoomc{position:fixed!important;right:8px!important;bottom:8px!important;left:auto!important;top:auto!important;background:rgba(29,29,29,.92)!important;border:1px solid var(--pl)!important;border-radius:4px!important;box-shadow:none!important;z-index:6}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #eadd{border-radius:3px!important}
 html[data-layout=pro][data-layout=pro][data-layout=pro] .ob{background:#2b2b2b!important;color:#ddd!important;border-radius:3px!important;box-shadow:none!important}
+
+/* ---------- v4: home screen, desktop proportions ---------- */
+html[data-layout=pro][data-layout=pro][data-layout=pro] #home{max-width:880px!important;margin:0 auto!important;padding:40px 28px 48px!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #home .hm-search input#hmQ{width:320px!important;height:36px!important;background:#242424!important;border:1px solid #3d3d3d!important;border-radius:6px!important;color:#eee!important;padding:0 12px!important;font-size:13px!important;outline:none}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #home .create #newVideo{height:104px!important;border-radius:14px!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #home .create #newVideo .circle{width:52px!important;height:52px!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #home #list .empty{height:96px!important;border-radius:12px!important}
+
+/* ---------- v4: new-project wizard as a centred desktop dialog ---------- */
+html[data-layout=pro][data-layout=pro][data-layout=pro] #nsw{align-items:center!important;justify-content:center!important;background:rgba(0,0,0,.62)!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #nsw .nt,html[data-layout=pro][data-layout=pro][data-layout=pro] #nsw #nswB,html[data-layout=pro][data-layout=pro][data-layout=pro] #nsw .nf{width:620px!important;max-width:94vw;background:#1d1d1d!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #nsw .nt{border-radius:12px 12px 0 0!important;border:1px solid #3a3a3a!important;border-bottom:0!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #nsw #nswB{flex:0 1 auto!important;max-height:66vh;overflow-y:auto;border-left:1px solid #3a3a3a!important;border-right:1px solid #3a3a3a!important;padding:6px 22px 18px!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #nsw .nf{border-radius:0 0 12px 12px!important;border:1px solid #3a3a3a!important;border-top:0!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #nsw .nf #nswNext{border-radius:8px!important}
+
+/* ---------- v4: timeline — ruler above the tracks, visible track-header column ---------- */
+html[data-layout=pro][data-layout=pro][data-layout=pro] #etc{display:flex!important;flex-direction:column!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #eruler{order:-1!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #thd{background:#232323!important;border-right:1px solid #3a3a3a!important;z-index:3!important}
