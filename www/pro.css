@@ -1,31 +1,43 @@
-/* Nijashwa Studio - "Pro" layout: Premiere-style panel workspace (html[data-layout=pro])
-   Clean grid: top bar / tools | monitor | project / tools | timeline | rail.
+/* Nijashwa Studio - "Pro" layout v2 (html[data-layout=pro])
+   Simple design approved by Nasheed (design v1 mockup):
+   top bar / Project + Tools (left) | Program Monitor / tools strip + full-width timeline.
    Only the editor screen is restyled; the mobile layout is untouched. */
 html[data-layout=pro]{--pp:#1d1d1d;--pp2:#242424;--tile:#2b2b2b;--tileh:#3a3a3a;--pl:#3a3a3a;--pb:#1473e6;--ptx:#e6e6e6;--pmu:#9a9a9a;font-size:12px}
 html[data-layout=pro] body{background:#000}
 
 /* ---------- editor grid ---------- */
-html[data-layout=pro][data-layout=pro][data-layout=pro] #editor.on{position:fixed;inset:0;display:grid!important;grid-template-columns:300px minmax(0,1fr) 340px 52px;grid-template-rows:32px minmax(0,1fr) 40%;gap:3px;padding:0!important;margin:0!important;max-width:none!important;background:#000!important;box-shadow:none!important;overflow:hidden;font-family:"Segoe UI",Inter,"Hind Siliguri",system-ui,sans-serif;color:var(--ptx)}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor.on{position:fixed;inset:0;display:grid!important;grid-template-columns:302px minmax(0,1fr);grid-template-rows:48px minmax(0,1fr) 34%;gap:3px;padding:0!important;margin:0!important;max-width:none!important;background:#000!important;box-shadow:none!important;overflow:hidden;font-family:"Segoe UI",Inter,"Hind Siliguri",system-ui,sans-serif;color:var(--ptx)}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #editor.on>*{border-radius:0!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;min-width:0;min-height:0}
 /* stray mobile-only children of the editor stay out of the grid */
 html[data-layout=pro][data-layout=pro][data-layout=pro] #editor.on>:not(.etop):not(#epv):not(#etb):not(#pcpanel):not(#etw):not(#v30proj):not(#v30st){display:none!important}
 
 /* ---------- top bar ---------- */
-html[data-layout=pro][data-layout=pro][data-layout=pro] .etop{grid-area:1/1/2/-1;position:static!important;display:flex!important;align-items:center;gap:6px;height:32px;padding:0 8px!important;background:var(--pp)!important;border:0!important}
-html[data-layout=pro][data-layout=pro][data-layout=pro] .etop button:not(.ex){width:26px!important;height:24px!important;border-radius:3px!important;background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;color:var(--ptx)}
-html[data-layout=pro][data-layout=pro][data-layout=pro] .etop button svg{width:16px!important;height:16px!important}
-html[data-layout=pro][data-layout=pro][data-layout=pro] .etop #eTitle{flex:1;text-align:center;font-size:12px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-html[data-layout=pro][data-layout=pro][data-layout=pro] .etop #eSeqs{width:auto!important;height:22px!important;min-width:0!important;margin:0!important;overflow:visible}
-html[data-layout=pro][data-layout=pro][data-layout=pro] .etop #eSeqs button{height:22px!important;width:auto!important;min-width:0!important;padding:0 10px!important;background:#2b2b2b!important;color:#fff!important;font-size:11px!important;border:0!important;border-radius:3px!important}
-html[data-layout=pro][data-layout=pro][data-layout=pro] .etop .ex,html[data-layout=pro][data-layout=pro][data-layout=pro] #editor .etop #eExport{height:22px!important;width:auto!important;min-width:0!important;padding:0 14px!important;border-radius:11px!important;background:var(--pb)!important;color:#fff!important;font-size:11px!important;font-weight:600;box-shadow:none!important;line-height:22px}
-html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #eExport svg{width:14px!important;height:14px!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .etop{grid-area:1/1/2/-1;position:static!important;display:flex!important;align-items:center;gap:8px;height:48px;padding:0 12px!important;background:var(--pp)!important;border:0!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .etop button:not(.ex){width:30px!important;height:30px!important;border-radius:4px!important;background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;color:var(--ptx)}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .etop button svg{width:18px!important;height:18px!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .etop #eTitle{flex:1;text-align:center;font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .etop #eSeqs{width:auto!important;height:26px!important;min-width:0!important;margin:0!important;overflow:visible}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .etop #eSeqs button{height:26px!important;width:auto!important;min-width:0!important;padding:0 12px!important;background:#2b2b2b!important;color:#fff!important;font-size:12px!important;border:0!important;border-radius:4px!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .etop .ex,html[data-layout=pro][data-layout=pro][data-layout=pro] #editor .etop #eExport{height:28px!important;width:auto!important;min-width:0!important;padding:0 18px!important;border-radius:14px!important;background:var(--pb)!important;color:#fff!important;font-size:12.5px!important;font-weight:600;box-shadow:none!important;line-height:28px}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #eExport svg{width:15px!important;height:15px!important}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #layBtn2{display:none!important}
 
-/* ---------- left tools panel (index.html gathers etb2/3/4 into #pcpanel) ---------- */
-html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #pcpanel{grid-area:2/1/4/2;display:flex!important;flex-direction:column;background:var(--pp);border:0;overflow-y:auto;overflow-x:hidden;position:relative;z-index:2}
-html[data-layout=pro][data-layout=pro][data-layout=pro] #pcpanel::before{content:"Clip Tools";display:block;padding:8px 10px;font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--ptx);border-bottom:1px solid var(--pl);position:sticky;top:0;background:var(--pp);z-index:1}
+/* ---------- left column, top: project panel ---------- */
+html[data-layout=pro][data-layout=pro][data-layout=pro] #v30proj{grid-area:2/1/3/2;align-self:start;height:calc(46% - 2px);position:relative;display:flex!important;flex-direction:column;margin:0!important;background:var(--pp)!important;border:0!important;overflow:hidden}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #v30proj .h{background:var(--pp)!important;border:0!important;border-bottom:1px solid var(--pl)!important;padding:9px 12px 7px!important;font-size:11px;font-weight:600;letter-spacing:.05em}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #v30proj .l{margin:0;padding:6px;flex:1;overflow:auto}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #v30proj .l button{border-radius:3px!important;font-size:12px;background:transparent!important;color:var(--ptx)!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #v30proj .l:empty{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #v30proj .l:empty::before{content:"Add your media";font-weight:600;font-size:12px}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #v30proj .l:empty::after{content:"Drag media here or import media to begin";font-size:12px;color:var(--pmu)}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #proImp{display:inline-block;background:var(--pb);color:#fff;border:0;border-radius:14px;padding:6px 18px;font-weight:600;font-size:12px;cursor:pointer;position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:2}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #v30st{display:none!important}
+
+/* ---------- left column, bottom: tools panel (index.html gathers etb2/3/4 into #pcpanel) ---------- */
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #pcpanel{grid-area:2/1/3/2;align-self:end;height:calc(54% - 2px);display:flex!important;flex-direction:column;background:var(--pp);border:0;overflow-y:auto;overflow-x:hidden;position:relative;z-index:2}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #pcpanel::before{content:"Tools";display:block;padding:9px 12px 7px;font-size:11px;font-weight:600;letter-spacing:.05em;color:var(--ptx);border-bottom:1px solid var(--pl);position:sticky;top:0;background:var(--pp);z-index:1}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #pcpanel .etb{display:flex!important;flex-direction:row!important;flex-wrap:wrap;justify-content:flex-start!important;align-content:flex-start;gap:6px!important;padding:8px!important;margin:0!important;width:auto!important;height:auto!important;overflow:visible!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;animation:none!important;transform:none!important;opacity:1!important}
-html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #pcpanel .etb button{flex:0 0 84px!important;width:84px!important;min-width:0!important;max-width:84px!important;height:58px!important;padding:3px 2px!important;display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:4px!important;background:var(--tile)!important;color:#ddd!important;border:0!important;border-radius:4px!important;font-size:10.5px!important;line-height:1.15;white-space:normal;text-align:center;overflow:hidden;box-shadow:none!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #pcpanel .etb button{flex:0 0 84px!important;width:84px!important;min-width:0!important;max-width:84px!important;height:56px!important;padding:3px 2px!important;display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:4px!important;background:var(--tile)!important;color:#ddd!important;border:0!important;border-radius:5px!important;font-size:10.5px!important;line-height:1.15;white-space:normal;text-align:center;overflow:hidden;box-shadow:none!important}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #pcpanel .etb button:hover{background:var(--tileh)!important}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #pcpanel .etb button.on{background:var(--pb)!important;color:#fff!important}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #pcpanel .etb button svg{width:22px!important;height:22px!important;flex:none;margin:0!important}
@@ -33,15 +45,16 @@ html[data-layout=pro][data-layout=pro][data-layout=pro] #pcpanel .v30ph{display:
 html[data-layout=pro][data-layout=pro][data-layout=pro] #pcpanel .etb + .etb{border-top:1px solid #333!important}
 
 /* ---------- tool properties panel: dock over the left column ---------- */
-html[data-layout=pro][data-layout=pro][data-layout=pro] .tp{position:fixed!important;left:0!important;right:auto!important;top:32px!important;bottom:0!important;width:300px!important;max-width:none!important;height:auto!important;min-height:0!important;margin:0!important;padding:0!important;border-radius:0!important;box-shadow:none!important;background:var(--pp)!important;border:0!important;border-right:1px solid var(--pl)!important;transform:none!important;z-index:40}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .tp{position:fixed!important;left:0!important;right:auto!important;top:48px!important;bottom:0!important;width:302px!important;max-width:none!important;height:auto!important;min-height:0!important;margin:0!important;padding:0!important;border-radius:0!important;box-shadow:none!important;background:var(--pp)!important;border:0!important;border-right:1px solid var(--pl)!important;transform:none!important;z-index:40}
 html[data-layout=pro][data-layout=pro][data-layout=pro] .tp:not(.on){display:none!important}
 html[data-layout=pro][data-layout=pro][data-layout=pro] .tp.on{display:flex!important;opacity:1;visibility:visible}
 html[data-layout=pro][data-layout=pro][data-layout=pro] .tpt button{border-radius:0!important;background:transparent!important;color:#cfcfcf!important;font-size:12px!important;padding:6px 10px!important}
 html[data-layout=pro][data-layout=pro][data-layout=pro] .tpt button.on{background:transparent!important;color:#fff!important;border-bottom:2px solid #fff}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .tpt{display:flex!important;flex-wrap:wrap!important}
 
 /* ---------- program monitor ---------- */
 html[data-layout=pro][data-layout=pro][data-layout=pro] #epv{grid-area:2/2/3/3;position:relative;display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:0;padding:26px 12px 0!important;margin:0!important;background:var(--pp)!important;overflow:hidden}
-html[data-layout=pro][data-layout=pro][data-layout=pro] #epv::before{content:"Program Monitor";position:absolute;left:12px;top:8px;font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--pmu)}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #epv::before{content:"Program Monitor";position:absolute;left:12px;top:8px;font-size:11px;font-weight:600;letter-spacing:.05em;color:var(--pmu)}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #epv canvas{max-width:100%;max-height:calc(100% - 84px)!important;border-radius:0!important;box-shadow:none!important;flex:0 1 auto}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #epv>button:not(#pnGb){position:absolute!important;top:30px!important;width:26px!important;height:26px!important;padding:4px!important;background:rgba(0,0,0,.45)!important;color:#ddd!important;border:0!important;border-radius:3px!important;box-shadow:none!important;z-index:3}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #epv #eReset{right:8px!important;left:auto!important}
@@ -57,35 +70,23 @@ html[data-layout=pro][data-layout=pro][data-layout=pro] #epv .etr button#eKey{wi
 html[data-layout=pro][data-layout=pro][data-layout=pro] #epv .etr .sep{display:none!important}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #epv .elab,html[data-layout=pro][data-layout=pro][data-layout=pro] #eNow{font-size:12px;color:#cfcfcf;background:transparent!important;border:0!important;box-shadow:none!important;flex:none}
 
-/* ---------- project panel ---------- */
-html[data-layout=pro][data-layout=pro][data-layout=pro] #v30proj{grid-area:2/3/3/5;display:flex!important;flex-direction:column;margin:0!important;background:var(--pp)!important;border:0!important;overflow:hidden}
-html[data-layout=pro][data-layout=pro][data-layout=pro] #v30proj .h{background:var(--pp)!important;border:0!important;padding:8px 12px 6px!important;font-size:11px;font-weight:600;letter-spacing:.04em}
-html[data-layout=pro][data-layout=pro][data-layout=pro] #v30proj .l{margin:0 12px 12px;border:1px solid var(--pl);padding:6px;flex:1;overflow:auto}
-html[data-layout=pro][data-layout=pro][data-layout=pro] #v30proj .l button{border-radius:3px!important;font-size:12px;background:transparent!important;color:var(--ptx)!important}
-html[data-layout=pro][data-layout=pro][data-layout=pro] #v30proj .l:empty{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center}
-html[data-layout=pro][data-layout=pro][data-layout=pro] #v30proj .l:empty::before{content:"Add your media";font-weight:600;font-size:12px}
-html[data-layout=pro][data-layout=pro][data-layout=pro] #v30proj .l:empty::after{content:"Drag media here or import media to begin";font-size:12px;color:var(--pmu)}
-html[data-layout=pro][data-layout=pro][data-layout=pro] #proImp{display:inline-block;background:var(--pb);color:#fff;border:0;border-radius:14px;padding:6px 18px;font-weight:600;font-size:12px;cursor:pointer;position:absolute;left:50%;bottom:calc(50% - 74px);transform:translateX(-50%);z-index:2}
-html[data-layout=pro][data-layout=pro][data-layout=pro] #v30st{display:none!important}
+/* ---------- tools strip above the timeline (main toolbar #etb as one row) ---------- */
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #etb{grid-area:3/1/4/-1;align-self:start;height:38px;display:flex!important;flex-direction:row!important;align-items:center;justify-content:flex-start!important;gap:2px!important;padding:0 10px!important;margin:0!important;background:var(--pp2)!important;border:0!important;border-bottom:1px solid #333!important;overflow-x:auto!important;overflow-y:hidden!important;width:auto!important;z-index:5}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #etb>button{flex:none!important;width:auto!important;min-width:0!important;height:30px!important;padding:0 9px!important;border-radius:4px!important;font-size:11px!important;gap:6px!important;background:transparent!important;color:#ddd!important;display:flex!important;align-items:center;border:0!important;box-shadow:none!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #etb>button svg{width:17px!important;height:17px!important;stroke:currentColor;flex:none}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #etb>button:hover{background:var(--tileh)!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #etb>button.on{background:var(--pb)!important;color:#fff!important}
 
-/* ---------- timeline ---------- */
-html[data-layout=pro][data-layout=pro][data-layout=pro] #etw{grid-area:3/2/4/4;position:relative;height:auto!important;margin:0!important;background:var(--pp)!important;border:1px solid #2a5db0!important;overflow:hidden}
+/* ---------- timeline (full width, below the tools strip) ---------- */
+html[data-layout=pro][data-layout=pro][data-layout=pro] #etw{grid-area:3/1/4/-1;position:relative;height:auto!important;margin:0!important;padding-top:38px!important;background:var(--pp)!important;border:1px solid #2a5db0!important;overflow:hidden}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #etl,html[data-layout=pro][data-layout=pro][data-layout=pro] #etin,html[data-layout=pro][data-layout=pro][data-layout=pro] #estrip,html[data-layout=pro][data-layout=pro][data-layout=pro] #estrip canvas{border-radius:0!important;background:var(--pp)!important}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #eph{width:1px!important;background:#4a9bff!important;box-shadow:none!important;margin-left:0!important}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #eph::before{background:#4a9bff!important;border-radius:0!important;width:12px!important;height:12px!important;clip-path:polygon(0 0,100% 0,100% 55%,50% 100%,0 55%);box-shadow:none!important;border:0!important;color:transparent!important}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #phHd{background:#4a9bff!important;color:#fff!important;border-radius:2px!important;box-shadow:none!important;font-size:10px!important;padding:1px 5px!important}
 
-/* ---------- tools rail (main toolbar only, right of the timeline) ---------- */
-html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #etb{grid-area:3/4/4/5;display:flex!important;flex-direction:column!important;align-items:center;justify-content:flex-start!important;gap:4px!important;padding:8px 0!important;margin:0!important;background:var(--pp)!important;border:0!important;overflow-y:auto!important;overflow-x:hidden!important;width:auto!important}
-html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #etb>button{flex:none!important;width:36px!important;min-width:0!important;height:32px!important;padding:0!important;border-radius:3px!important;font-size:0!important;gap:0!important;background:transparent!important;color:#ddd!important;display:grid!important;place-items:center;border:0!important;box-shadow:none!important}
-html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #etb>button svg{width:20px!important;height:20px!important;stroke:currentColor}
-html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #etb>button:hover{background:var(--tileh)!important}
-html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #etb>button.on{background:var(--pb)!important;color:#fff!important}
-
 /* ---------- mobile trays/docks stay out of the desktop workspace ---------- */
 html[data-layout=pro][data-layout=pro][data-layout=pro] #pnxTray{display:none!important}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #tbdock,html[data-layout=pro][data-layout=pro][data-layout=pro] #tbTgl,html[data-layout=pro][data-layout=pro][data-layout=pro] #tlRz{display:none!important}
-html[data-layout=pro][data-layout=pro][data-layout=pro] .zoomc{position:fixed!important;right:60px!important;bottom:8px!important;left:auto!important;top:auto!important;background:rgba(29,29,29,.92)!important;border:1px solid var(--pl)!important;border-radius:4px!important;box-shadow:none!important;z-index:6}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .zoomc{position:fixed!important;right:8px!important;bottom:8px!important;left:auto!important;top:auto!important;background:rgba(29,29,29,.92)!important;border:1px solid var(--pl)!important;border-radius:4px!important;box-shadow:none!important;z-index:6}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #eadd{border-radius:3px!important}
 html[data-layout=pro][data-layout=pro][data-layout=pro] .ob{background:#2b2b2b!important;color:#ddd!important;border-radius:3px!important;box-shadow:none!important}
-html[data-layout=pro][data-layout=pro][data-layout=pro] .tpt{display:flex!important;flex-wrap:wrap!important}
