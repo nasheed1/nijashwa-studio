@@ -114,3 +114,90 @@ html[data-layout=pro][data-layout=pro][data-layout=pro] #nsw .nf #nswNext{border
 html[data-layout=pro][data-layout=pro][data-layout=pro] #etc{display:flex!important;flex-direction:column!important}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #eruler{order:-1!important}
 html[data-layout=pro][data-layout=pro][data-layout=pro] #thd{background:#232323!important;border-right:1px solid #3a3a3a!important;z-index:3!important}
+
+/* ---------- v5: CapCut light theme (measured in the live CapCut editor, 2026-11-14) ----------
+   White panels, #EFF3F5 monitor surround, 1px #E6EAEC dividers, 8px radii,
+   cyan accent #12C0EA, blue-to-cyan gradient primary buttons, controls strip
+   directly above the timeline, black playhead. */
+html[data-layout=pro][data-layout=pro][data-layout=pro]{--pp:#ffffff;--pp2:#f2f5f7;--tile:#f2f5f7;--tileh:#e8edf0;--pl:#e6eaec;--pb:#12c0ea;--ptx:#1c1f26;--pmu:#68707a}
+html[data-layout=pro] body{background:#ffffff}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor.on{gap:0;background:#ffffff!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .etop{border-bottom:1px solid var(--pl)!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .etop #eSeqs button{background:#f2f5f7!important;color:#1c1f26!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .etop .ex,html[data-layout=pro][data-layout=pro][data-layout=pro] #editor .etop #eExport{background:linear-gradient(90deg,#428ae3,#2ab2e3)!important;border-radius:8px!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #etb{border-right:1px solid var(--pl)}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #etb>button{color:#3c4043!important;border-radius:8px!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #etb>button:hover{background:var(--tileh)!important;color:#111111!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #etb>button.on{background:#e2edf6!important;color:#111111!important;box-shadow:none!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #v30proj{border-right:1px solid var(--pl)}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #proImp{border-radius:8px!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #epv{background:#eff3f5!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #epv canvas{max-height:calc(100% - 40px)!important;box-shadow:0 1px 5px rgba(16,24,40,.18)!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #epv>button:not(#pnGb),html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #epv #pnGb{background:#ffffff!important;color:#333333!important;border:1px solid var(--pl)!important;border-radius:6px!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #epv .etr{position:fixed!important;left:0!important;right:0!important;bottom:32vh;top:auto!important;width:auto!important;height:46px!important;min-height:46px;background:#ffffff!important;border-top:1px solid var(--pl)!important;border-bottom:1px solid var(--pl)!important;z-index:30;padding:0 10px!important;justify-content:flex-start!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #epv .etr button{color:#444444!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #epv .etr button:hover{color:#000000!important;background:#f2f5f7!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #epv #ePlay{color:#111111!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #epv .elab,html[data-layout=pro][data-layout=pro][data-layout=pro] #eNow{color:#333333!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #pcpanel{border-left:1px solid var(--pl)}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #pcpanel .etb + .etb{border-top:1px solid var(--pl)!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #pcpanel .etb button{color:#2b2f36!important;border-radius:8px!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #pcpanel .etb button.on{color:#ffffff!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .tp{color:#1c1f26}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .tpt button{color:#444444!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .tpt button.on{color:#111111!important;border-bottom:2px solid var(--pb)}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .tp input,html[data-layout=pro][data-layout=pro][data-layout=pro] .tp select,html[data-layout=pro][data-layout=pro][data-layout=pro] .tp textarea{background:#f2f5f7!important;color:#1c1f26!important;border:1px solid #d8dee2!important;border-radius:6px!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #etw{border:0!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #etl{background:#ffffff!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #eruler{color:#7a828c!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #thd{background:#ffffff!important;border-right:1px solid var(--pl)!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #eph{background:#141414!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #eph::before{background:#141414!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #phHd{background:#141414!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .ov .sheet{background:#ffffff!important;color:#1c1f26}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .ov .sheet button{background:#f2f5f7;color:#1c1f26;border-radius:8px}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #esGo{background:linear-gradient(90deg,#428ae3,#2ab2e3)!important;color:#ffffff!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .zoomc{background:#ffffff!important;color:#1c1f26;border:1px solid var(--pl)!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .ob{background:#f2f5f7!important;color:#1c1f26!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #home{color:#1c1f26}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #home .logo,html[data-layout=pro][data-layout=pro][data-layout=pro] #home .pg-h,html[data-layout=pro][data-layout=pro][data-layout=pro] #home .sec,html[data-layout=pro][data-layout=pro][data-layout=pro] #home .sec .lbl,html[data-layout=pro][data-layout=pro][data-layout=pro] #home .sec .cnt,html[data-layout=pro][data-layout=pro][data-layout=pro] #home .hm-act{color:#1c1f26!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #home .hm-search input#hmQ{background:#f2f5f7!important;border:1px solid var(--pl)!important;color:#1c1f26!important;border-radius:8px!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #home .create #newVideo{background:linear-gradient(120deg,#428ae3,#2ab2e3)!important;color:#ffffff!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #home #list .empty{background:#f2f5f7!important;color:#68707a!important;border:1px solid var(--pl)!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #nsw{background:rgba(15,18,22,.45)!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #nsw .nt,html[data-layout=pro][data-layout=pro][data-layout=pro] #nsw #nswB,html[data-layout=pro][data-layout=pro][data-layout=pro] #nsw .nf{background:#ffffff!important;border-color:var(--pl)!important;color:#1c1f26!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #nsw input,html[data-layout=pro][data-layout=pro][data-layout=pro] #nsw select{background:#f2f5f7!important;color:#1c1f26!important;border:1px solid #d8dee2!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #nsw .opts>*{background:#f2f5f7!important;border-color:#d8dee2!important;color:#1c1f26!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #nsw .nf #nswNext{background:linear-gradient(90deg,#428ae3,#2ab2e3)!important;color:#ffffff!important}
+
+/* ---------- v5.1 fixes ---------- */
+html[data-layout=pro][data-layout=pro][data-layout=pro] #home::before{background:none!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #home .create #newVideo{box-shadow:0 10px 26px rgba(43,140,227,.35)!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #home .logo span,html[data-layout=pro][data-layout=pro][data-layout=pro] #home .logo small,html[data-layout=pro][data-layout=pro][data-layout=pro] #home .logo p{color:#68707a!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #nswB p,html[data-layout=pro][data-layout=pro][data-layout=pro] #nswB small,html[data-layout=pro][data-layout=pro][data-layout=pro] #nswB label{color:#68707a!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #nsw .opts small{color:#68707a!important}
+
+/* ---------- v5.2: specificity bumps for app rules that outrank v5 ---------- */
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #epv{background:#eff3f5!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #epv .etr{position:fixed!important;left:0!important;right:0!important;top:auto!important;bottom:32vh!important;width:auto!important;height:46px!important;min-height:46px;background:#ffffff!important;border-top:1px solid var(--pl)!important;border-bottom:1px solid var(--pl)!important;z-index:30}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #epv .etr button{color:#444444!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #etl #eph{background:#141414!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #etl #eph::before{background:#141414!important}
+
+/* ---------- v5.3: playhead (real parent chain) + strip once pro.js moves it to <body> ---------- */
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #etw #eph{background:#141414!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #editor #etw #eph::before{background:#141414!important}
+html[data-layout=pro] body>.etr button{color:#444444!important;background:transparent!important}
+html[data-layout=pro] body>.etr button:hover{color:#000000!important;background:#f2f5f7!important}
+html[data-layout=pro] body>.etr #ePlay{color:#111111!important}
+html[data-layout=pro] body>.etr .elab{color:#333333!important}
+
+/* ---------- v5.4: dark (.dk) sheets go light; sheets paint above the strip ---------- */
+html[data-layout=pro][data-layout=pro][data-layout=pro] .ov{z-index:80!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] #esOv .sheet.dk,html[data-layout=pro][data-layout=pro][data-layout=pro] .ov .sheet.dk{background:#ffffff!important;color:#1c1f26!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .ov .sheet.dk h3,html[data-layout=pro][data-layout=pro][data-layout=pro] .ov .sheet.dk .xsv,html[data-layout=pro][data-layout=pro][data-layout=pro] .ov .sheet.dk b,html[data-layout=pro][data-layout=pro][data-layout=pro] .ov .sheet.dk .xst span.on{color:#1c1f26!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .ov .sheet.dk .lb,html[data-layout=pro][data-layout=pro][data-layout=pro] .ov .sheet.dk p,html[data-layout=pro][data-layout=pro][data-layout=pro] .ov .sheet.dk .xst span{color:#68707a!important}
+html[data-layout=pro][data-layout=pro][data-layout=pro] .ov .sheet.dk .xsl{background:#f2f5f7!important;border-radius:8px!important}
+
+/* ---------- v5.5: the export sheet's own id outranks class rules ---------- */
+html[data-layout=pro][data-layout=pro][data-layout=pro] #esOv #es.sheet.dk{background:#ffffff!important;background-color:#ffffff!important}
