@@ -90,3 +90,10 @@ There is no analytics or tracking. The profile and "license key" fields on the P
 3. কাজ শেষ হলে **NijashwaStudio-apk** আর্টিফ্যাক্ট ডাউনলোড করো, জিপ খুলে APK ফোনে ইনস্টল করো
 
 নিজের স্থায়ী সাইন করা APK চাইলে উপরের `ANDROID_KEYSTORE_*` secrets যোগ করো। `index.html`-এর ইনলাইন স্ক্রিপ্ট বদলালে `npm run csp:fix` চালাতে ভুলো না।
+
+## Pro layout (Premiere-style workspace)
+
+On desktop (mouse + window >= 900px) the editor opens in the **Pro** layout: Effect/tool panel on the left,
+Program monitor in the middle, Project panel on the right, timeline at the bottom and a tools column on its right.
+Phones keep the Mobile layout. Force one with `?layout=pro` or `?layout=mobile` (remembered in localStorage).
+Files: `www/pro.css`, `www/pro.js` (plus small hooks in `index.html`; run `npm run csp:fix` after editing inline scripts).
