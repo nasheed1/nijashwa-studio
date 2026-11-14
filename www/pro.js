@@ -36,3 +36,35 @@
     }
   }catch(e){}
 })();
+
+/* v5 (CapCut copy): in Pro layout, pin the transport bar (.etr) as a full-width
+   controls strip directly above the timeline, like CapCut's strip. It is moved
+   to <body> because the editor subtree traps position:fixed elements. */
+(function(){
+  var H=document.documentElement;
+  function place(){
+    var etr=document.querySelector('.etr'),epv=document.getElementById('epv');
+    if(!etr||!epv)return;
+    if(H.dataset.layout==='pro'){
+      if(etr.parentElement!==document.body)document.body.appendChild(etr);
+      var ed=document.getElementById('editor'),on=ed&&ed.classList.contains('on'),s=etr.style;
+      s.setProperty('position','fixed','important');
+      s.setProperty('left','0','important');s.setProperty('right','0','important');
+      s.setProperty('top','auto','important');
+      s.setProperty('bottom',Math.round(innerHeight*0.32)+'px','important');
+      s.setProperty('height','46px','important');s.setProperty('min-height','46px','important');
+      s.setProperty('background','#ffffff','important');
+      s.setProperty('border-top','1px solid #e6eaec','important');
+      s.setProperty('border-bottom','1px solid #e6eaec','important');
+      s.setProperty('border-radius','0','important');s.setProperty('box-shadow','none','important');
+      s.setProperty('z-index','35','important');
+      s.setProperty('display',on?'flex':'none','important');
+      s.setProperty('align-items','center','important');
+      s.setProperty('padding','0 10px','important');s.setProperty('margin','0','important');
+      s.setProperty('width','auto','important');s.setProperty('transform','none','important');
+    }else if(etr.parentElement===document.body){
+      epv.appendChild(etr);etr.removeAttribute('style');
+    }
+  }
+  setInterval(place,600);addEventListener('resize',place);place();
+})();
